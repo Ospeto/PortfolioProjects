@@ -1,10 +1,10 @@
-# [Project 1: HR Data Analysis and Employee Prediction]
+# Project 1: HR Data Analysis and Employee Prediction
 
 ### Summary
 This project, part of Google's Advance Data Analytics Certificate Course, focuses on data-driven insights for the HR department. Using techniques like Exploratory Data Analysis (EDA), Data Cleaning, and Data Visualization, learned from Google's top instructors, the goal is to predict whether an employee will stay or leave.
 
 ### Code 
-[Capstone project: Providing data-driven suggestions for HR.ipynb]
+[Capstone project: Providing data-driven suggestions for HR.ipynb](https://github.com/Ospeto/PortfolioProjects/blob/main/Capstone%20project%3A%20Providing%20data-driven%20suggestions%20for%20HR.ipynb)
 
 ### Approach
 
