@@ -8,7 +8,7 @@ This project, part of Google's Advance Data Analytics Certificate Course, focuse
 
 ### Approach
 
-#### Data Processing:
+#### Skills used for Data Processing:
 
 Applied EDA, Data Cleaning, and Data Analysis methods to understand and clean the dataset.
 Utilized tools taught by Google's instructors for effective data visualization.
