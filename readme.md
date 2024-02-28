@@ -29,3 +29,31 @@ Notable Achievements
 Successful implementation of logistic regression and XGBoost models.
 Precision-focused approach for accurate identification of potential employee departures.
 Final model showcases both high performance and resilience against overfitting.
+
+
+# Project 2: Excel Mini-Projects from Macquarie University Excel for Data Analysis Course
+
+### Summary
+I have gained profound insights into Excel functions, Tables, IF, AND, OR conditions, VLOOKUP, XLOOKUP, conditional formatting, date functions, custom number formats, Sparklines, slicing, filtering, and visualization with basic and specialized charts through this comprehensive series of projects.
+
+The instructors have demonstrated excellence, providing a curriculum enriched with real-world scenarios. The use of realistic datasets enhances the learning experience, allowing for a deeper understanding of the applications. The meticulous attention to detail in crafting the projects reflects the commitment to delivering a high-quality and professional learning environment.
+
+### Code 
+[Excel Projects](https://github.com/Ospeto/PortfolioProjects/tree/main/Porfolio%20Excel)
+
+#### Skills used for Excel Projects :
+
+- Excel Functions
+- Name ranges
+- Logical Operators (IF,Nested IF, AND, OR)
+- Tables
+- VLOOKUP,XLOOKUP
+- INDEX and MATCH
+- DATE
+- TEXT , TEXTJOIN, REPLACE
+- VISUALIZATION (PIE CHART,BAR CHART,COLUMN CHART, LINE CHART, AREA CHART, MAP CHART, FUNNEL CHART, POPULATION CHART, WATERFALL CHART,TREE CHART,SUNBLAST CHART)
+- TRENDLINES WITH R SQUARE
+- CONDITIONAL FORMATS, MACROS
+
+
+
