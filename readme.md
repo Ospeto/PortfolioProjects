@@ -7,7 +7,7 @@ This project, part of Google's Advance Data Analytics Certificate Course, focuse
 [Capstone project: Providing data-driven suggestions for HR.ipynb](https://github.com/Ospeto/PortfolioProjects/blob/c3447f117b3504f0b4a2217a6c93a6ee5c6fb5af/Python%20Projects/Capstone%20project%3A%20Providing%20data-driven%20suggestions%20for%20HR.ipynb)
 
 ### Dataset
-[HR_capstone_dataset.csv](https://github.com/Ospeto/PortfolioProjects/blob/main/HR_capstone_dataset.csv)
+[HR_capstone_dataset.csv](https://github.com/Ospeto/PortfolioProjects/blob/c3447f117b3504f0b4a2217a6c93a6ee5c6fb5af/Python%20Projects/HR_capstone_dataset.csv)
 
 #### Skills used for Data Processing:
 
