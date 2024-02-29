@@ -6,7 +6,8 @@ This project, part of Google's Advance Data Analytics Certificate Course, focuse
 ### Code 
 [Capstone project: Providing data-driven suggestions for HR.ipynb](https://github.com/Ospeto/PortfolioProjects/blob/main/Capstone%20project%3A%20Providing%20data-driven%20suggestions%20for%20HR.ipynb)
 
-### Approach
+### Dataset
+[HR_capstone_dataset.csv](https://github.com/Ospeto/PortfolioProjects/blob/main/HR_capstone_dataset.csv)
 
 #### Skills used for Data Processing:
 
@@ -39,7 +40,7 @@ I have gained profound insights into Excel functions, Tables, IF, AND, OR condit
 The instructors have demonstrated excellence, providing a curriculum enriched with real-world scenarios. The use of realistic datasets enhances the learning experience, allowing for a deeper understanding of the applications. The meticulous attention to detail in crafting the projects reflects the commitment to delivering a high-quality and professional learning environment.
 
 ### Code 
-[Excel Projects](https://github.com/Ospeto/PortfolioProjects/tree/main/Porfolio%20Excel)
+[Excel Projects](https://github.com/Ospeto/PortfolioProjects/tree/d08bc4e92857c3da1cf879c94b43283bbf9b7094/Porfolio%20Excel)
 
 #### Skills used for Excel Projects :
 
