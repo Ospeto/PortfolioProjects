@@ -39,7 +39,7 @@ I have gained profound insights into Excel functions, Tables, IF, AND, OR condit
 
 The instructors have demonstrated excellence, providing a curriculum enriched with real-world scenarios. The use of realistic datasets enhances the learning experience, allowing for a deeper understanding of the applications. The meticulous attention to detail in crafting the projects reflects the commitment to delivering a high-quality and professional learning environment.
 
-### Code 
+### Project Files  
 [Excel Projects](https://github.com/Ospeto/PortfolioProjects/tree/d08bc4e92857c3da1cf879c94b43283bbf9b7094/Porfolio%20Excel)
 
 #### Skills used for Excel Projects :
