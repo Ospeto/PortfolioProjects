@@ -59,6 +59,11 @@ The instructors have demonstrated excellence, providing a curriculum enriched wi
 - VISUALIZATION (PIE CHART,BAR CHART,COLUMN CHART, LINE CHART, AREA CHART, MAP CHART, FUNNEL CHART, POPULATION CHART, WATERFALL CHART,TREE CHART,SUNBLAST CHART)
 - TRENDLINES WITH R SQUARE
 - CONDITIONAL FORMATS, MACROS
+- Introduction to POWER BI
+- Data Analysis Expression(DAX)
+- Power Query/M language
+- Power Piviot
+- Dashboard building in Power BI
 
 
 
