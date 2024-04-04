@@ -4,10 +4,13 @@
 This project, part of Google's Advance Data Analytics Certificate Course, focuses on data-driven insights for the HR department. Using techniques like Exploratory Data Analysis (EDA), Data Cleaning, and Data Visualization, learned from Google's top instructors, the goal is to predict whether an employee will stay or leave. 
 
 ### Code 
-[Capstone project: Providing data-driven suggestions for HR.ipynb](https://github.com/Ospeto/PortfolioProjects/blob/c3447f117b3504f0b4a2217a6c93a6ee5c6fb5af/Python%20Projects/Capstone%20project%3A%20Providing%20data-driven%20suggestions%20for%20HR.ipynb)
+[Capstone project: Providing data-driven suggestions for HR.ipynb](https://github.com/Ospeto/PortfolioProjects/blob/3c835484112f62cc5f837323a5f3920bbeadea4d/Python%20Projects/Capstone%20project%3A%20Providing%20data-driven%20suggestions%20for%20HR.ipynb) 
 
 ### Dataset
-[HR_capstone_dataset.csv](https://github.com/Ospeto/PortfolioProjects/blob/c3447f117b3504f0b4a2217a6c93a6ee5c6fb5af/Python%20Projects/HR_capstone_dataset.csv)
+[HR_capstone_dataset.csv](https://github.com/Ospeto/PortfolioProjects/blob/3c835484112f62cc5f837323a5f3920bbeadea4d/Python%20Projects/HR_capstone_dataset.csv)
+
+### Executive Summary
+[Exercutive_Summary.pdf](https://github.com/Ospeto/PortfolioProjects/blob/3c835484112f62cc5f837323a5f3920bbeadea4d/Python%20Projects/Executive%20Summary%20of%20Employee_retention_project.pdf) 
 
 #### Skills used for Data Processing:
 
@@ -16,7 +19,7 @@ Utilized tools taught by Google's instructors for effective data visualization.
 
 #### Machine Learning Models:
 Implemented Logistic Classification and XGBoost models for Binary Classification.
-Prediction focused on determining if an employee will stay or leave based on various features like working hours, satisfaction level, and tenure.
+Prediction focuses on determining if an employee will stay or leave based on various features like working hours, satisfaction level, and tenure.
 Emphasized achieving a higher precision score during model tuning.
 
 #### Model Performance:
@@ -29,7 +32,7 @@ The resulting model performs well, providing accurate predictions for employee r
 Notable Achievements
 Successful implementation of logistic regression and XGBoost models.
 Precision-focused approach for accurate identification of potential employee departures.
-Final model showcases both high performance and resilience against overfitting.
+The final model showcases both high performance and resilience against overfitting.
 
 #### [Google Advanced Data Analytic Certificate](https://github.com/Ospeto/PortfolioProjects/blob/b3e1b58dc73fcec827c1f70c171170a3c8cafeaf/Certificates/Advanced%20Data%20Analytic.pdf)
 
