@@ -29,11 +29,14 @@ After removing duplicate rows for the statistical inference section, the analysi
 * Identified two notable attrition profiles: employees with low satisfaction and lower activity, and highly evaluated employees working very long hours.
 * Found that employees with high evaluation scores and longer tenure often had no recent promotion, making promotion history a practical risk signal to investigate.
 
-### 2. Statistical Inference (Hypothesis Testing & Effect Size)
-To ensure the business insights are mathematically rigorous, several statistical tests were conducted, focusing not just on statistical significance ($p$-value) but also practical impact (Effect Size):
-* **Chi-Square Test of Independence:** Proved a statistically significant relationship between salary level and likelihood of leaving ($p = 8.98e^{-39}$). However, **Cramer's V = 0.121**, indicating this relationship is real but *modest*. Salary is a factor, but not the primary driver.
-* **Two-Sample Independent T-test:** Validated that employees who left worked ~9.2 more hours per month on average than those who stayed ($p = 2.27e^{-10}$). The effect size (**Cohen's d = 0.190**) is *small*, showing that while overwork exists, 9 hours a month alone doesn't trigger mass resignations.
-* **One-Way ANOVA (F-test):** Demonstrated that job satisfaction varies drastically depending on the number of projects assigned ($p < 0.001$). Crucially, the effect size (**$\eta^2$ = 0.257**) is *very large*—meaning nearly 26% of the variance in an employee's satisfaction is explained purely by their project count. The steepest drop in satisfaction occurs when employees are burdened with 6-7 projects.
+### 2. Statistical Inference
+The hypothesis tests show statistically significant relationships, but they should be interpreted as association evidence, not causal proof. Because the inference dataset is large (`n = 11,991` after duplicate removal), small mean differences can produce very small p-values. For that reason, the analysis reports effect sizes alongside p-values to separate statistical significance from practical significance.
+
+* **Chi-Square Test of Independence:** Salary level and attrition are statistically associated (`p = 8.98e-39`, Cramer's V = `0.121`). The effect size suggests a real but modest relationship.
+* **Welch's Two-Sample T-test:** Employees who left worked about 9.2 more hours per month on average than employees who stayed (`p = 2.27e-10`, Cohen's d = `0.190`). The difference is statistically significant, but the effect size is small.
+* **One-Way ANOVA:** Satisfaction differs across project-count groups (`p < 0.001`, eta squared = `0.257`). The clearest practical drop appears at 6-7 projects, where average satisfaction is much lower.
+
+**Interpretation note:** The small Cohen's d for monthly hours does not mean workload is unimportant. Employees who left appear to split into two workload patterns: lower-hour leavers and very high-hour leavers. Because a t-test compares group means, these two groups pull the attrition average toward the middle, making the mean difference look small. The workload signal is clearer in the non-linear model through `overworked`, `number_of_projects`, and the project-count satisfaction pattern.
 
 ### 3. Feature Engineering and Target Leakage Prevention
 * **Preventing target leakage:** `satisfaction_level` is strongly correlated with turnover, but it is also close to the outcome HR wants to prevent. For a more actionable model, the final model excludes `satisfaction_level`.
