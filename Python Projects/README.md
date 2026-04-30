@@ -38,6 +38,8 @@ The hypothesis tests show statistically significant relationships, but they shou
 
 **Interpretation note:** The small Cohen's d for monthly hours does not mean workload is unimportant. Employees who left appear to split into two workload patterns: lower-hour leavers and very high-hour leavers. Because a t-test compares group means, these two groups pull the attrition average toward the middle, making the mean difference look small. The workload signal is clearer in the non-linear model through `overworked`, `number_of_projects`, and the project-count satisfaction pattern.
 
+![Average monthly hours distribution by attrition status](assets/hr-hours-by-attrition.png)
+
 ### 3. Feature Engineering and Target Leakage Prevention
 * **Preventing target leakage:** `satisfaction_level` is strongly correlated with turnover, but it is also close to the outcome HR wants to prevent. For a more actionable model, the final model excludes `satisfaction_level`.
 * **Creating business-relevant features:** A binary `overworked` feature was engineered to flag employees working more than 180 hours per month.
@@ -65,9 +67,3 @@ The evidence points to workload/project load, overtime patterns, salary level, a
 * **Statistics:** SciPy (`scipy.stats`)
 * **Machine Learning:** scikit-learn, XGBoost
 * **Data Visualization:** Matplotlib, Seaborn
-
-## Repository Evidence
-* GitHub repository: <https://github.com/Ospeto/PortfolioProjects>
-* Public project path: `Python Projects/README.md`
-* Final polish commit: `ddad2ca` (`docs: Calibrate HR statistical inference claims`)
-* Final polish intent: calibrated statistical wording to association/effect-size language and removed unsupported tool claims.

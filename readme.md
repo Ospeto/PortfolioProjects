@@ -6,7 +6,7 @@ I am building a data analyst portfolio from an 8-year background in tech media a
 
 ### [P1] HR Employee Retention and Attrition Analysis
 
-Status: project brief published; notebook cleanup still in progress.
+Status: portfolio-ready case study with cleaned README, notebook, executive summary, and dataset.
 
 - **Goal:** Identify likely drivers of employee turnover and recommend practical retention actions.
 - **Tools:** Python, pandas, scikit-learn, XGBoost
@@ -50,7 +50,7 @@ Status: planned.
 
 ## Supporting Coursework
 
-- **Excel Data Analysis:** Mini-projects from the Macquarie University Excel for Data Analysis course, covering formulas, lookup functions, pivot-style analysis, and dashboard basics. [View files](Porfolio%20Excel/)
+- **Excel Data Analysis:** Mini-projects from the Macquarie University Excel for Data Analysis course, covering formulas, lookup functions, pivot-style analysis, and dashboard basics. [View files](Portfolio%20Excel/)
 
 ## Contact
 
