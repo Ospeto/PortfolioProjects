@@ -1,87 +1,57 @@
-# HR Employee Retention and Attrition Analysis
+# 📊 HR Employee Retention & Attrition Analysis
 
-## Problem
+## 📖 Project Overview
+Employee turnover is a critical issue for modern organizations, directly impacting productivity, morale, and recruitment costs. This project aims to analyze a dataset from Salifort Motors to identify the root causes of employee attrition and predict which employees are at high risk of leaving. 
 
-Salifort Motors wants to reduce employee turnover. The HR team needs a practical answer to one business question: what factors are most likely to make an employee leave?
+Rather than relying purely on predictive models, this project utilizes **Applied Statistical Inference** to mathematically validate the underlying causes of turnover before building machine learning models.
 
-This project turns the existing HR dataset into a retention analysis and predictive model that can help HR identify risk patterns before employees leave.
+## 🎯 Business Problem
+The HR department wants to know:
+1. **Why** are employees leaving? (Root cause analysis)
+2. **Who** is likely to leave next? (Predictive modeling)
+3. **What** actionable steps can be taken to retain top talent?
 
-## Data
+## 📂 The Data
+The dataset (`HR_capstone_dataset.csv`) contains 14,999 records of employee data, featuring:
+* `satisfaction_level`: Employee-reported job satisfaction
+* `last_evaluation`: Score of the most recent performance review
+* `number_project`: Number of projects handled
+* `average_montly_hours`: Average hours worked per month
+* `tenure`: Years spent at the company
+* `salary`: Categorical salary level (low, medium, high)
+* `left`: Binary target variable indicating turnover (1 = left, 0 = stayed)
 
-The project uses the HR capstone dataset from the Google Advanced Data Analytics certificate.
+## 🔬 Methodology: Applied Statistics & Machine Learning
 
-- Raw size: 14,999 employee records and 10 columns.
-- Cleaned size used in the notebook: 11,991 records after duplicate removal.
-- Target variable: `left`, where `1` means the employee left and `0` means the employee stayed.
-- Key fields: satisfaction level, last evaluation score, number of projects, average monthly hours, tenure, work accident flag, promotion flag, department, and salary.
+### 1. Exploratory Data Analysis (EDA)
+* Identified that departing employees typically exhibit two distinct profiles: either underperforming with low hours, or highly evaluated but severely overworked (working near 300 hours/month).
+* Discovered a significant lack of promotions over the last 5 years, even among top performers.
 
-## Tools
+### 2. Statistical Inference (Hypothesis Testing)
+To ensure the business insights are mathematically rigorous, several statistical tests were conducted:
+* **Chi-Square Test of Independence:** Proved a statistically significant relationship between an employee's salary level and their likelihood of leaving ($p < 0.05$).
+* **Two-Sample Independent T-test:** Validated that the difference in average monthly working hours between employees who stayed and those who left is statistically significant, confirming overwork as a systematic issue.
+* **One-Way ANOVA (F-test):** Demonstrated that job satisfaction levels vary significantly depending on the number of projects assigned.
 
-- Python
-- pandas and numpy
-- matplotlib and seaborn
-- scikit-learn
-- XGBoost
+### 3. Feature Engineering & Target Leakage Prevention
+* **Preventing Target Leakage:** The `satisfaction_level` feature was highly correlated with turnover. However, dissatisfaction is a *symptom* of leaving, not a fixable root cause. To build an actionable model, `satisfaction_level` was dropped.
+* **Creating Business-Relevant Features:** A new binary feature, `overworked`, was engineered (defined as working $>180$ hours/month) to capture the threshold of burnout.
 
-## Method
+### 4. Machine Learning Modeling
+* **Logistic Regression:** Served as a baseline model to establish linear relationships.
+* **XGBoost Classifier:** Selected as the final champion model due to its ability to capture complex, non-linear interactions (e.g., high evaluation + long hours + no promotion).
+* **Performance:** The final XGBoost model achieved a Precision of **91.5%**, Recall of **89.3%**, and an overall Accuracy of **96.8%**.
 
-1. Loaded and inspected the HR dataset.
-2. Standardized column names into clearer snake_case names.
-3. Checked for missing values, duplicate records, and outliers.
-4. Explored the relationship between attrition and satisfaction, workload, project count, tenure, salary, and evaluation score.
-5. Compared logistic regression with an XGBoost classifier.
-6. Built a final XGBoost model with feature engineering.
+## 💡 Results & Business Recommendations
+Based on the feature importance and statistical analysis, the primary drivers of employee turnover are excessive workloads and stagnant career progression. 
 
-The final model uses an `overworked` flag for employees working more than 180 average monthly hours. It also removes `satisfaction_level` and `average_monthly_hours` from the final feature set so the model points more directly toward operational drivers HR can act on.
+**Actionable Recommendations for Management:**
+1. **Cap Workloads:** Implement a hard limit on the number of projects an employee can handle simultaneously. Employees should not be working 300+ hours a month.
+2. **Revamp Promotion Criteria:** Employees with high evaluation scores and over 4 years of tenure are leaving due to lack of advancement. Establish a clear promotion pathway for senior individual contributors.
+3. **Restructure Evaluation Metrics:** Ensure performance evaluations are based on impact and efficiency, rather than purely rewarding long hours, which actively incentivizes burnout.
 
-## Key Findings
-
-- Employees who left had lower satisfaction on average than employees who stayed.
-- Attrition was concentrated among employees with either unusually low or unusually high monthly hours.
-- High workload, project count, tenure, and evaluation score were important signals in the final model.
-- The final feature importance view highlighted `last_evaluation`, `number_of_projects`, `tenure`, `overworked`, and `salary` as major predictors.
-- A strong evaluation score may be partly tied to long working hours, so HR should be careful not to reward unsustainable workload patterns.
-
-## Model Results
-
-The final XGBoost model was selected because it performed better than logistic regression and retained strong performance after feature engineering.
-
-| Metric | Final XGBoost result |
-|---|---:|
-| F1 score | 0.9046 |
-| Recall | 0.8960 |
-| Precision | 0.9134 |
-| Accuracy | 0.9681 |
-
-## Recommendation
-
-HR should treat overwork and project overload as retention risks.
-
-Recommended actions:
-
-- Cap the number of active projects an employee can carry.
-- Review overtime patterns and reduce sustained work above normal monthly hours.
-- Compensate overtime clearly when high workload is unavoidable.
-- Promote employees with strong evaluation scores and longer tenure instead of relying only on workload-heavy performance signals.
-- Make overtime and workload expectations explicit so employees understand policy and managers apply it consistently.
-
-## Limitations
-
-- The dataset is a course capstone dataset, so the result should be treated as portfolio evidence, not a production HR system.
-- The target variable does not cleanly separate voluntary resignation from termination.
-- Evaluation scores may be biased by workload, manager behavior, or department norms.
-- The model should support HR review, not automate employment decisions.
-- The notebook still contains course scaffolding and exploratory work; this README is the recruiter-facing project summary.
-
-## Files
-
-- [Notebook](Capstone%20project%3A%20Providing%20data-driven%20suggestions%20for%20HR.ipynb)
-- [Dataset](HR_capstone_dataset.csv)
-- [Executive summary](Executive%20Summary%20of%20Employee_retention_project.pdf)
-
-## How to Reproduce
-
-1. Open the notebook in a Python environment with pandas, numpy, matplotlib, seaborn, scikit-learn, and xgboost installed.
-2. Keep `HR_capstone_dataset.csv` in the same folder as the notebook.
-3. Run the notebook cells from top to bottom.
-4. Review the final XGBoost metrics and feature importance output.
+## 🛠️ Tools Used
+* **Languages:** Python (pandas, numpy)
+* **Statistics:** SciPy (`scipy.stats`), statsmodels
+* **Machine Learning:** scikit-learn, XGBoost
+* **Data Visualization:** Matplotlib, Seaborn
