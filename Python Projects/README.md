@@ -47,7 +47,7 @@ The hypothesis tests show statistically significant relationships, but they shou
 ### 4. Machine Learning Modeling
 * **Logistic Regression:** Used as a baseline model to establish linear relationships.
 * **XGBoost Classifier:** Selected as the final model because it captures non-linear interactions such as high evaluation, long hours, tenure, and no recent promotion.
-* **Performance:** The final XGBoost model achieved precision of **91.5%**, recall of **89.3%**, and overall accuracy of **96.8%**.
+* **Performance:** The final XGBoost model achieved precision of **91.5%**, recall of **89.6%**, and overall accuracy of **96.8%**.
 
 ## Results and Business Recommendations
 The evidence points to workload/project load, overtime patterns, salary level, and career progression as practical attrition risk signals.
@@ -67,3 +67,6 @@ The evidence points to workload/project load, overtime patterns, salary level, a
 * **Statistics:** SciPy (`scipy.stats`)
 * **Machine Learning:** scikit-learn, XGBoost
 * **Data Visualization:** Matplotlib, Seaborn
+
+## Reproducibility
+The notebook was executed top-to-bottom from a clean kernel. Install the Python dependencies with `pip install -r requirements.txt`. On macOS, XGBoost may also require `brew install libomp`.

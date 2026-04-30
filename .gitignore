@@ -1,0 +1,4 @@
+Python Projects/models/
+*.pickle
+__pycache__/
+.ipynb_checkpoints/
